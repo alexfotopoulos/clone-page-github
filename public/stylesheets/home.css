@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(229, 233, 238);
+    height: 100vh;
+}
+
+aside {
+    background-color: white;
+    height: 100vh;
+}
+
+#asideButton {
+    height: 1.5rem;
+    background-color: rgb(25, 150, 25);
+    color: white;
+    font-size: .8rem;
+    border:1px solid green;
+    padding: 0 .8rem;
+    border-radius: .3rem;
+}
+
+#leadText {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+#repoSearch {
+    border: 1px solid rgb(207, 211, 216);
+    background-color: rgb(229, 233, 238);
+    border-radius: .3rem;
+    line-height: 1.8rem;
+}
+
+#repoSearch::placeholder {
+    font-size: .9rem;
+    padding-left: .6rem;
+}
+
+#repoList {
+    list-style: none;
+    padding-left: 0;
+    font-size: .9rem;
+}
+
+#repoList li {
+    margin-bottom: .5rem;
+}
+
+#showMore {
+    text-decoration: none;
+    color: rgb(103, 103, 103);
+    font-size: .9rem;
+}
+
+#recentActivity {
+    color: rgb(103, 103, 103);
+    font-size: .8rem;
+}

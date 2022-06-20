@@ -24,7 +24,7 @@
     color: white;
 }
 
-#avatar {
+.avatar {
     height: 20px;
     border-radius: 50%;
 }
