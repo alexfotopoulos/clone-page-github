@@ -1,39 +1,107 @@
 <% layout('layouts/boilerplate')%>
-<div class="container-fluid">
-    <div class="row h-100">
-        <aside class="col-2 pt-4">
-            <div class="ps-3 pe-3">
-                <div class="d-flex justify-content-between align-items-end mb-3">
-                    <Span id="leadText">Recent Repositories</Span>
-                    <button id="asideButton"class="d-inline">
-                        <span class="d-flex">
-                            <svg class="pt-1"aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
-                                <path fill-rule="evenodd" fill="#FFFFFF" stroke="#FFFFFF" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
-                            </svg>
-                            <span class="ps-1">New</span>
-                        </span>
-                    </button>
+    <div class="container-fluid">
+        <div class="row h-100">
+            <aside class="d-none d-lg-block col-3 pt-4">
+                <div class="ps-3 pe-3">
+                    <div class="d-flex justify-content-between align-items-end mb-3">
+                        <Span id="leadText">Recent Repositories</Span>
+                        <button id="asideButton" class="d-inline">
+                            <span class="d-flex">
+                                <svg class="pt-1" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"
+                                    data-view-component="true">
+                                    <path fill-rule="evenodd" fill="#FFFFFF" stroke="#FFFFFF"
+                                        d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+                                    </path>
+                                </svg>
+                                <span class="ps-1">New</span>
+                            </span>
+                        </button>
+                    </div>
+                    <form class="mb-4">
+                        <input id="repoSearch" class="w-100" type="text" placeholder="Find a repository...">
+                    </form>
+                    <ul id="repoList">
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/mern-stattrac</li>
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/react-stattrac</li>
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/react-quizzical</li>
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/react-meals</li>
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/Stattrac</li>
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/react-todo</li>
+                        <li><span><img class="me-2 avatar" src="/icons/ghavatar.png"
+                                    alt=""></span>alexfotopoulos/Weatherapp</li>
+                    </ul>
+                    <a id="showMore" href="#">Show more</a>
+                    <hr>
+                    <Span id="leadText">Recent activity</Span>
+                    <p id="recentActivity">When you take actions across Github, we'll provide links to that activity
+                        here</p>
                 </div>
-                <form class="mb-4">
-                    <input id="repoSearch"class="w-100" type="text" placeholder="Find a repository...">
-                </form>
-                <ul id="repoList">
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/mern-stattrac</li>
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/react-stattrac</li>
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/react-quizzical</li>
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/react-meals</li>
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/Stattrac</li>
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/react-todo</li>
-                    <li><span><img class="me-2 avatar" src="/icons/ghavatar.png" alt=""></span>alexfotopoulos/Weatherapp</li>
-                </ul>
-                <a id="showMore" href="#">Show more</a>
+            </aside>
+            <main class="col-12 col-lg-9">
+                <div class="row pt-4">
+                    <div class="col-8 ps-5">
+                        <div>
+                            <a class="mainAnchors" href="">Following</a>
+                            <a class="mainAnchors ps-4" href="">For you</a>
+                            <span id="beta">Beta</span>
+                        </div>
+                        <hr>
+                        <div id="discoverSection" class="bg-light p-5 rounded">
+                            <h4>Discover Interesting projects and people to populate your personal news feed.</h4>
+                            <p>Your news feed helps you keep up with recent activity on repositories you <a href=""
+                                    class="text-decoration-none">watch</a> or <a href=""
+                                    class="text-decoration-none">star</a> and people you <a href=""
+                                    class="text-decoration-none">follow</a>.</p>
+                            <button class="btn btn-outline-primary" id="mainButton">Explore GitHub</button>
+                        </div>
+                        <div id="bottomBlurb" class="mt-4 text-muted mb-5">
+                            <p><span><img class="avatar" src="/icons/bulb.png" alt=""></span><b>ProTip!</b> The feed shows you events from people you <a
+                                    class="text-decoration-none" href="">follow</a> and repositories you <a
+                                    class="text-decoration-none" href="">watch</a> or <a class="text-decoration-none"
+                                    href="">star</a>.
+                            </p>
+                            <p><span>
+                                <svg height="16" viewBox="0 0 16 16" width="16" data-view-component="true">
+                                    <path stroke="#979A9C" fill-rule="evenodd" d="M2.002 2.725a.75.75 0 01.797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 11-1.497.098 10.502 10.502 0 00-9.776-9.776.75.75 0 01-.7-.798zM2 13a1 1 0 112 0 1 1 0 01-2 0zm.84-5.95a.75.75 0 00-.179 1.489c2.509.3 4.5 2.291 4.8 4.8a.75.75 0 101.49-.178A7.003 7.003 0 002.838 7.05z""></path>
+                                </svg>
+                            </span> Subscribe to your news feed</p>
+                        </div>
+                        <div class="row text-muted footer">
+                            <div class="col-5">
+                                <span><img src="/icons/footerGH.png" alt=""></span>&copy; 2022 GitHub, Inc.
+                            </div>
+                            <div class="col-7 d-flex">
+                                    <ul class="footerList">
+                                        <li>Blog</li>
+                                        <li>About</li>
+                                        <li>Shop</li>
+                                        <li>Contact</li>
+                                        <li>Github</li>
+                                        <li>Pricing</li>
+                                    </ul>
+                                    <ul class="footerList">
+                                        <li>API</li>
+                                        <li>Training</li>
+                                        <li>Status</li>
+                                        <li>Security</li>
+                                    </ul>
+                                    <ul class="footerList">
+                                        <li>Terms</li>
+                                        <li>Privacy</li>
+                                        <li>Docs</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">Aside</div>
+                </div>
                 <hr>
-                <Span id="leadText">Recent activity</Span>
-                <p id="recentActivity">When you take actions across Github, we'll provide links to that activity here</p>
-            </div>
-        </aside>
-        <main class="col-10">
-            Github Main
-        </main>
+            </main>
+        </div>
     </div>
-</div>

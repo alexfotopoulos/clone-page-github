@@ -55,3 +55,47 @@ aside {
     color: rgb(103, 103, 103);
     font-size: .8rem;
 }
+
+.mainAnchors {
+    text-decoration: none;
+    color: black;
+    font-size: .9rem;
+}
+
+.mainAnchors:first-child {
+    font-weight: bold;
+}
+
+#mainButton {
+    border: 1px solid #d0c8c8;
+    padding: .2rem 1rem;
+    border-radius: .3rem;
+}
+
+#discoverSection {
+    border: 1px solid #d0c8c8;
+}
+
+#bottomBlurb {
+    font-size: small;
+}
+
+.footer {
+    font-size: small;
+}
+
+.footerList {
+    list-style: none;
+}
+
+.footerList li {
+    padding-bottom: .2rem;
+}
+
+#beta {
+    color: green;
+    border: 1px solid green;
+    border-radius: 1rem;
+    font-size: .9rem;
+    padding: 0 .2rem
+}
