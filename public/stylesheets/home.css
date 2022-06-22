@@ -99,3 +99,7 @@ aside {
     font-size: .9rem;
     padding: 0 .2rem
 }
+
+#exploreRepoAside {
+    font-size: small;
+}
